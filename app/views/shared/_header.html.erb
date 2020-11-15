@@ -1,28 +1,24 @@
-<header class='top-page-header'>
-  <div class='search-bar-contents'>
-    <%= link_to image_tag("furima-logo-color.png", class:"platt-icon"), "/" %>
-    <form class="search-form" action="#">
-      <input class='input-box' placeholder='検索またはキーワードを入力'>
-      <button class="search-button">
-        <%= image_tag "search.png", class:"search-icon" %>
-      </button>
-    </form>
-  </div>
-  <div class='nav'>
-    <ul class='lists-left'>
-      <li><%= link_to 'カテゴリー', "#", class: "category-list" %></li>
-      <li><%= link_to 'ブランド', "#", class: "brand-list" %></li>
-    </ul>
-    <ul class='lists-right'>
-      <%# deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
-    <% if user_signed_in? %>
-      <li><%= link_to current_user.name, "#", class: "user-nickname" %></li> 
-      <li><%= link_to 'ログアウト', "#", method: :delete, class: "logout" %></li>
-    <% else %>
-      <li><%= link_to 'ログイン', "#", class: "login" %></li>
-      <li><%= link_to '新規登録', "#", class: "sign-up" %></li>
-    <% end %>
-      <%# //deviseを導入できたら、ログインの有無で表示が変わるように分岐しましょう%>
-    </ul>
-  </div>
-</header>
+<header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">Platt</a></h1>
+         <% if user_signed_in? %>
+          <div class="user_nav grid-6">
+           <span><%= current_user.name %>
+            <ul class="user__info">
+              <li>
+                <%= link_to "マイページ", "/users/#{current_user.id}" %>
+                <%= link_to "ログアウト", "#", method: :delete %>
+              </li>
+            </ul>
+          </span>
+            <%= link_to "投稿する", new_tweet_path, class: "post" %>
+          </div>
+        <% else %>
+          <div class="grid-6">
+            <%= link_to "ログイン", "#", class: "post" %>
+            <%= link_to "新規登録", "#", class: "post" %>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    </header>
