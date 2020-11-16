@@ -1,0 +1,11 @@
+<div class="contents row">
+  <p><%= @name %>さんの投稿一覧</p>
+  <% @tweets.each do |tweet| %>
+    <div>
+     <%= image_tag tweet.image, class: 'tweet-img' if tweet.image.attached? %>
+     </div>
+     <div>
+     <%= tweet.title %>
+     </div>
+  <% end %>
+</div>
