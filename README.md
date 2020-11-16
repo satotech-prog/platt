@@ -26,6 +26,7 @@ comments テーブル
  Column              | Type    | Options     |
 | --------           | ------  | ----------- |
 | comment            | string  | null: false |
+| user               | references | null: false, foreign_key: true |
 | tweet              | references | null: false, foreign_key: true |
 
 - belongs_to :user
