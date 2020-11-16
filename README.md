@@ -18,7 +18,7 @@ tweets テーブル
 | user          | references | null: false, foreign_key: true |
 
 - has_many :comments
-- belong_to :user
+- belongs_to :user
 
 
 comments テーブル
@@ -28,7 +28,7 @@ comments テーブル
 | comment            | string  | null: false |
 | tweet              | references | null: false, foreign_key: true |
 
-- belong_to :user
-- belong_to:tweet
+- belongs_to :user
+- belongs_to:tweet
 
 

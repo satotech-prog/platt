@@ -2,15 +2,17 @@
 
 <div class="contents row">
   <% @tweets.each do |tweet| %>
-    
-      <p><%= tweet.text %></p>
-      <span class="name">
-        <%= tweet.name %>
-      </span>
-    </div>
+     <div>
+     <%= image_tag tweet.image, class: 'tweet-img' if tweet.image.attached? %>
+     </div>
+     <div>
+     <%= tweet.title %>
+     </div>
   <% end %>
 </div>
-<%= link_to "#" do %>
+
+
+<%= link_to new_tweet_path do %>
 <div class='purchase-btn'>
   <span class='purchase-btn-text'>NEW</span>
     <%= image_tag 'icon.png' , size: '185x50' ,class: "purchase-btn-icon" %>
