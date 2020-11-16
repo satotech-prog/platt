@@ -3,7 +3,7 @@
     <h3>NEW</h3>
     <%= form_with model: @tweet, local: true do |form| %>
 
-    
+    <%= render 'shared/error_messages', model: form.object %>
 
       <%= form.file_field :image, id: "tweet-image" %>
       <%= form.text_field :title, placeholder: "タイトル" %>
