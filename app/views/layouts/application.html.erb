@@ -9,17 +9,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+ <body>
     <%= yield %>
-    <% if user_signed_in? %>
-<%= link_to new_tweet_path do %>
-<div class='purchase-btn'>
-  <span class='purchase-btn-text'>NEW</span>
-    <%= image_tag 'icon.png' , size: '185x50' ,class: "purchase-btn-icon" %>
-</div>
-<% end %>
-<% else %>
-<% end %>
-  </body>
+ </body>
 </html>
 

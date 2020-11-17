@@ -1,15 +1,19 @@
 <%= render "shared/header" %>
 
+
 <div class="contents row">
   <% @tweets.each do |tweet| %>
+  <%= link_to tweet_path(tweet.id) do %>
      <div>
      <%= image_tag tweet.image, class: 'tweet-img' if tweet.image.attached? %>
      </div>
      <div>
      <%= tweet.title %>
      </div>
+     <% end %>
   <% end %>
 </div>
+
 
 
 <% if user_signed_in? %>
@@ -19,5 +23,4 @@
     <%= image_tag 'icon.png' , size: '185x50' ,class: "purchase-btn-icon" %>
 </div>
 <% end %>
-<% else %>
 <% end %>

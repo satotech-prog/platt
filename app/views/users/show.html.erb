@@ -1,5 +1,6 @@
 <div class="contents row">
   <p><%= @name %>さんの投稿一覧</p>
+  <%= link_to '戻る', root_path %>
   <% @tweets.each do |tweet| %>
     <div>
      <%= image_tag tweet.image, class: 'tweet-img' if tweet.image.attached? %>

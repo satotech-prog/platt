@@ -12,3 +12,12 @@
     <% end %>
   </div>
 </div>
+
+<% if user_signed_in? %>
+    <%= link_to root_path do %>
+      <div class='purchase-btn'>
+        <span class='purchase-btn-text'>キャンセル</span>
+        <%# image_tag 'icon.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+      </div>
+    <% end %>
+  <% end %>
