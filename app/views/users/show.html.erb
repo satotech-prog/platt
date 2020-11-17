@@ -2,11 +2,13 @@
   <p><%= @name %>さんの投稿一覧</p>
   <%= link_to '戻る', root_path %>
   <% @tweets.each do |tweet| %>
+  <%= link_to tweet_path(tweet.id) do %>
     <div>
      <%= image_tag tweet.image, class: 'tweet-img' if tweet.image.attached? %>
      </div>
      <div>
      <%= tweet.title %>
      </div>
+     <% end %>
   <% end %>
 </div>
