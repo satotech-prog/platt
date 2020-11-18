@@ -5,10 +5,13 @@
   <% @tweets.each do |tweet| %>
   <%= link_to tweet_path(tweet.id) do %>
      <div>
-     <%= image_tag tweet.image, class: 'tweet-img' if tweet.image.attached? %>
+     <%= tweet.title %>
      </div>
      <div>
-     <%= tweet.title %>
+     <%= tweet.user.name %>
+     </div>
+     <div>
+     <%= image_tag tweet.image, class: 'tweet-img' if tweet.image.attached? %>
      </div>
      <% end %>
   <% end %>
