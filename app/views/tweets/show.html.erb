@@ -1,9 +1,13 @@
+<%= render "shared/header" %>
+
 <div class="contents row">
  <div class="tweet-note">
   <div class="tweet-title">
       <p><%= @tweet.title %></p>
+      </div>
+      <div class=tweet-top>
       <%= link_to 'トップページ', root_path %>
-    </div>
+      </div>
     <div class="tweet-exposition">
       <%= @tweet.exposition %>
     </div>
@@ -37,7 +41,7 @@
       <% if @comments %>
         <% @comments.each do |comment| %>
           <p>
-            <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+            <strong><%= comment.user.name %>：</strong>
             <%= comment.text %>
           </p>
         <% end %>
