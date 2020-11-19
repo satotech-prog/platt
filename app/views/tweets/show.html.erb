@@ -1,18 +1,26 @@
-  <div class="content_post" style="background-image: url(<%= @tweet.image %>);">
-    
-    <p><%= @tweet.title %></p>
-    <span class="name"><%= @tweet.exposition %>
-    </span>
+<div class="contents row">
+ <div class="tweet-note">
+  <div class="tweet-title">
+      <p><%= @tweet.title %></p>
+      <%= link_to 'トップページ', root_path %>
+    </div>
+    <div class="tweet-exposition">
+      <%= @tweet.exposition %>
+    </div>
 
-    <div class="more">
-      <span><%= image_tag @tweet.image, class: 'tweet-img' if @tweet.image.attached? %></span>
+
+    <div class="tweet-base">
+      <span><%= image_tag @tweet.image, class: 'tweet-image' if @tweet.image.attached? %></span>
+      <div class="tweet-page">
       <% if user_signed_in? && current_user.id == @tweet.user_id%>
+         <div class="tweet-destroy">
           <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
           <%= link_to 'マイページ', "/users/#{@tweet.user_id}" %>
+           </div>
       <% end %>
-          <%= link_to 'トップページ', root_path %>
+      </div>
     </div>
-</div>
+
 
   <div class="container">
     <% if user_signed_in? %>
@@ -23,7 +31,6 @@
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
-  </div>
 
   <div class="comments">
       <h4>＜コメント一覧＞</h4>
@@ -36,4 +43,6 @@
         <% end %>
       <% end %>
     </div>
-
+  </div>
+ </div>
+</div>
