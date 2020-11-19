@@ -3,10 +3,8 @@
         <h1 class="grid-6"><a href="/">Platt</a></h1>
          <% if user_signed_in? %>
           <div class="user_nav grid-6">
-           <span>
-          <%= link_to current_user.name, "/users/#{current_user.id}" %>
-          </span>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post" %>
+                 <%= link_to current_user.name, "/users/#{current_user.id}", class: "post" %>
+                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post" %>
           </div>
         <% else %>
           <div class="grid-6">
@@ -14,7 +12,6 @@
             <%= link_to "新規登録", new_user_registration_path, class: "post" %>
           </div>
         <% end %>
-        </div>
       </div>
     </header>
 

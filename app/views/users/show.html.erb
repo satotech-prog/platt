@@ -1,13 +1,19 @@
 <div class="contents row">
-  <p><%= @name %>さんの投稿</p>
-  <%= link_to 'トップページ', root_path %>
+<div class="mypage">
+  <h1><%= @name %>さんの投稿</h1>
+  </div>
+  <div class="mypage-return">
+  <p><%= link_to 'トップページ', root_path %></p>
+  </div>
   <% @tweets.each do |tweet| %>
   <%= link_to tweet_path(tweet.id) do %>
-    <div>
-     <%= image_tag tweet.image, class: 'tweet-img' if tweet.image.attached? %>
+  <div class="contribution">
+    <div class="contribution-title">
+      <%= tweet.title %>
+    </div>
+    <div class="contribution-image">
+      <%= image_tag tweet.image, class: 'tweet-img' if tweet.image.attached? %>
      </div>
-     <div>
-     <%= tweet.title %>
      </div>
      <% end %>
   <% end %>

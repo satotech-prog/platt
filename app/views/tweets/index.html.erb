@@ -4,14 +4,16 @@
 <div class="contents row">
   <% @tweets.each do |tweet| %>
   <%= link_to tweet_path(tweet.id) do %>
-     <div>
+    <div class="contribution">
+     <div class="contribution-title">
      <%= tweet.title %>
      </div>
-     <div>
+     <div class="contribution-user-name">
      <%= tweet.user.name %>
      </div>
-     <div>
+     <div class="contribution-image">
      <%= image_tag tweet.image, class: 'tweet-img' if tweet.image.attached? %>
+     </div>
      </div>
      <% end %>
   <% end %>
