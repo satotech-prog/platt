@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: platt_production
-  username: platt
-  password: <%= ENV['PLATT_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
