@@ -1,14 +1,29 @@
 <div class="contents row">
-  <p><%= @name %>さんの投稿一覧</p>
-  <%= link_to '戻る', root_path %>
+<div class="mypage">
+  <h1><%= @name %>さんの投稿</h1>
+  </div>
+  <div class="mypage-return">
+  <p><%= link_to 'トップページ', root_path %></p>
+  </div>
   <% @tweets.each do |tweet| %>
   <%= link_to tweet_path(tweet.id) do %>
-    <div>
-     <%= image_tag tweet.image, class: 'tweet-img' if tweet.image.attached? %>
+  <div class="contribution">
+    <div class="contribution-title">
+      <%= tweet.title %>
+    </div>
+    <div class="contribution-image">
+      <%= image_tag tweet.image, class: 'tweet-img' if tweet.image.attached? %>
      </div>
-     <div>
-     <%= tweet.title %>
      </div>
      <% end %>
   <% end %>
 </div>
+
+<% if user_signed_in? %>
+<%= link_to new_tweet_path do %>
+<div class='purchase-btn'>
+  <span class='purchase-btn-text'>NEW</span>
+    <%= image_tag 'icon.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+</div>
+<% end %>
+<% end %>

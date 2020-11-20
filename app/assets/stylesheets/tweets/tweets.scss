@@ -1,0 +1,89 @@
+div.contribution {
+  height: auto;
+  width: 100%;
+  padding: 10px 10px 0;
+  background-color: #fff;
+  border-width: 1px 0 0 0;
+	border-style: dotted;
+  border-color: #1e88e5;
+  text-align: center;
+}
+
+
+div.contribution-title {
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+div.contribution-user-name {
+text-align: left;
+}
+
+div.contribution-image {
+  .resizeimage img { width: 100vw; }
+}
+
+div.mypage {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+div.mypage h1 {
+  text-align: center;
+  font-size: 30px;
+  background-color: #1e88e5;
+}
+
+div.mypage-return {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+}
+
+div.mypage-return p {
+  text-align: center;
+  font-size: 30px;
+}
+
+div.tweet-note {
+  
+}
+
+div.tweet-title {
+  height: 30px;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  margin-bottom: 30px;
+}
+
+div.tweet-top {
+  height: 30px;
+  text-align: center;
+}
+
+div.tweet-exposition {
+  height: auto;
+  padding: 5px;
+  font-size: 18px;
+  margin-bottom: 10px;;
+  border: 1px solid gray;
+}
+
+div.tweet-base {
+  display: block;
+  text-align: center;
+}
+
+div.tweet-destroy {
+  height: auto;
+  font-size: 35px;
+  padding: 10px 10px 0;
+}
+
+div.tweet-destroy a {
+  margin-left: 25px;
+}
