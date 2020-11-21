@@ -57,12 +57,13 @@ README作成 実装に必要なDBテーブルを作成します。
 test.dioを参照
 
 ローカルでの動作確認
+cd ~/projects
 git clone https://github.com/satotech-prog/platt.git
-
-
-
-
-
+cd platt
+bundle install
+yarn install
+rails db:create
+rails db:migrate
 
 users テーブル
 
