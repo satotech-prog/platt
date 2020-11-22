@@ -2,9 +2,9 @@ div.contribution {
   height: auto;
   width: 100%;
   padding: 10px 10px 0;
-  background-color: #fff;
-  border-width: 1px 0 0 0;
-	border-style: dotted;
+  background-color: #003366;
+  border-width: 1px 0 1px 0;
+	border-style: double;
   border-color: #1e88e5;
   text-align: center;
 }
@@ -14,7 +14,8 @@ div.contribution-title {
   height: 40px;
   padding: 10px;
   text-align: center;
-  color: black;
+  color: white;
+  font-size: 23px;
 }
 
 div.contribution-user-name {
