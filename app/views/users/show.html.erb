@@ -2,9 +2,6 @@
 <div class="mypage">
   <h1><%= @name %>さんの投稿</h1>
   </div>
-  <div class="mypage-return">
-  <p><%= link_to 'トップページ', root_path %></p>
-  </div>
   <% @tweets.each do |tweet| %>
   <%= link_to tweet_path(tweet.id) do %>
   <div class="contribution">
@@ -27,3 +24,6 @@
 </div>
 <% end %>
 <% end %>
+
+<%= render "shared/footer" %>
+
