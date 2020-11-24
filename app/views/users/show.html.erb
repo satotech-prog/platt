@@ -1,7 +1,6 @@
+<%= render "shared/header2" %>
+
 <div class="contents row">
-<div class="mypage">
-  <h1><%= @name %>さんの投稿</h1>
-  </div>
   <% @tweets.each do |tweet| %>
   <%= link_to tweet_path(tweet.id) do %>
   <div class="contribution">

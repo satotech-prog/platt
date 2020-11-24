@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <footer class="fotter">
 <nav class="global-nav">
   <ul class="nav-list">
@@ -18,12 +19,12 @@
       </a>
     </li>
     <li class="nav-item">
-      <a href="#">
+      <%=link_to "/users/#{current_user.id}" do %>
         <i class="fas fa-history">
 				<%= image_tag 'test3.png' , size: '40x45' %>
 				</i>
         <span>Mypage</span>
-      </a>
+      <% end %>
     </li>
     <li class="nav-item">
       <a href="#">
@@ -36,3 +37,4 @@
   </ul>
 </nav>
 </footer>
+<% end %>

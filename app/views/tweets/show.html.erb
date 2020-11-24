@@ -1,4 +1,4 @@
-<%= render "shared/header" %>
+<%= render "shared/header1" %>
 
 <div class="contents row">
  <div class="tweet-note">
@@ -36,7 +36,7 @@
       <% if @comments %>
         <% @comments.each do |comment| %>
           <p>
-            <strong><%= comment.user.name %>：</strong>
+            <strong><%= comment.user.name %></strong>
             <%= comment.text %>
           </p>
         <% end %>

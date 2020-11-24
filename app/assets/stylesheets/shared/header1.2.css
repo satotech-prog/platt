@@ -1,0 +1,27 @@
+
+header.header div.header1_bow {
+  position: relative;
+}
+
+header.header div.header1_bow h1.header1_grid {
+  font-size: 30px;
+  line-height: 41px;
+  text-align: center;
+  color: aliceblue;
+}
+
+header.header div.header1_bow h1.header1_grid p {
+  display: block;
+}
+
+header.header div.header2_bow {
+  position: relative;
+}
+
+
+header.header div.header2_bow h1.header2_grid {
+  font-size: 30px;
+  line-height: 41px;
+  text-align: left;
+  color: aliceblue;
+}
