@@ -1,6 +1,5 @@
 <%= render "shared/header" %>
 
-
 <div class="contents row">
   <% @tweets.each do |tweet| %>
   <%= link_to tweet_path(tweet.id) do %>
