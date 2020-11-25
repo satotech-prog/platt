@@ -7,11 +7,13 @@
   right: 45px;
   position: fixed;
   padding: 15px;
+  transition : 1s;
 }
 
 .purchase-btn:hover {
   transition: all 0.3s ease 0s;
   background-color: #00bfff;
+  transform: scale(1.1,1.1);
 }
 
 .purchase-btn-text {
