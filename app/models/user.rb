@@ -7,7 +7,7 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :email
-    validates :password
+    validates :password, length: { maximum: 6 }
   end
 
   has_many :tweets
