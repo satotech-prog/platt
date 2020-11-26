@@ -28,4 +28,32 @@
   width: 50%;
 }
 
+@media (max-width: 1024px) {
+.purchase-btn {
+  width: 100px;
+  padding: 10px;
+}
+
+.purchase-btn-text {
+  font-size: 12px;
+}
+
+.purchase-btn-icon {
+  width: 50%;
+}
+
+}
+
+@media (max-width: 500px) {
+  .purchase-btn {
+    width: 80px;
+    bottom: 70px;
+    right: 15px;
+    padding: 7px;
+  }
+
+  .purchase-btn-text {
+    font-size: 3px;
+  }
+}
 

@@ -772,6 +772,47 @@ header.header div.header__bar.row div.grid-6 a.post {
   margin-left: 15px;
 }
 
+@media (max-width: 500px) {
+
+header.header {
+  padding: 10px;
+  border: 1px solid #1e88e5;
+  background-color: #003366;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  height: 62px;
+}
+
+header.header div.header__bar.row {
+  position: relative;
+}
+
+  header.header div.header__bar.row h1.grid-6 {
+    font-size: 20px;
+    line-height: auto;
+    float: left;
+   }
+
+   header.header div.header__bar.row h1.grid-6 a {
+    display: block;
+  }
+  
+   header.header div.header__bar.row div.grid-6 {
+    float: right;
+    text-align: right;
+  }
+
+  header.header div.header__bar.row div.grid-6 a.post {
+    width: 60px;
+    display: inline-left;
+    margin-left: 10px;
+    font-size: 2px;
+  }
+}
+
 header.header .user_nav {
   position: relative;
   height: 100px;
@@ -794,6 +835,33 @@ header.header .user_nav span:after {
   content: '▼';
   font-size: .7em;
   margin-left: -4px;
+}
+
+@media (max-width: 500px) {
+
+  header.header .user_nav {
+    position: relative;
+    height: 100px;
+    right: 0;
+  }
+  
+  header.header .user_nav span {
+    top: 5px;
+    display: block;
+    float: left;
+    margin-left: 30px;
+    width: 150px;
+    height: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  header.header .user_nav span:after {
+    content: '▼';
+    font-size: .4em;
+    margin-left: -4px;
+  }
 }
 
 header.header .user_nav span:hover ul {
@@ -1024,6 +1092,13 @@ form input[type="submit"]:hover {
 .comments {
   padding: 5px;
   margin-top: 15px;
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+  .comments {
+    font-size: 13px;
+  }
 }
 
 .comments a {

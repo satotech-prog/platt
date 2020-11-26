@@ -25,3 +25,9 @@ header.header div.header2_bow h1.header2_grid {
   text-align: left;
   color: aliceblue;
 }
+
+@media (max-width: 500px) {
+  header.header div.header2_bow h1.header2_grid {
+    font-size: 20px;
+  }
+}
