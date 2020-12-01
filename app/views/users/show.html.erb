@@ -1,4 +1,4 @@
-<%= render "shared/header2" %>
+<%= render partial: "shared/header2", locals: { name: @name } %>
 
 <div class="contents row">
   <% @tweets.each do |tweet| %>

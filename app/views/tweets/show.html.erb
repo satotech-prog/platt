@@ -10,7 +10,11 @@
     </div>
 
     <div class="tweet-base">
-      <span><%= image_tag @tweet.image, class: 'tweet-image' if @tweet.image.attached? %></span>
+
+    <%= link_to @tweet.image, "data-lightbox" => @tweet.image do %>
+      <span><%= image_tag @tweet.image, height: '250', :style=>"width:300;", class: 'tweet-image' if @tweet.image.attached? %></span>
+      <% end %>
+      
       <div class="tweet-page">
       <% if user_signed_in? && current_user.id == @tweet.user_id%>
          <div class="tweet-destroy">
@@ -36,7 +40,7 @@
       <% if @comments %>
         <% @comments.each do |comment| %>
           <p>
-            <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+            <strong><%= link_to comment.user.name, user_path(comment.user.id) %>：</strong>
             <%= comment.text %>
           </p>
         <% end %>
