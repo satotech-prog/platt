@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: [:index, :search]
 
   def index
     @tweets = Tweet.all.order("created_at DESC")
@@ -27,6 +27,10 @@ class TweetsController < ApplicationController
   def destroy
     tweet = Tweet.find(params[:id])
     redirect_to root_path if tweet.destroy
+  end
+
+  def search
+    @tweets = Tweet.search(params[:keyword])
   end
 
   private
