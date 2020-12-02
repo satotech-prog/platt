@@ -8,6 +8,7 @@ header.header div.header1_bow h1.header1_grid {
   line-height: 41px;
   text-align: center;
   color: aliceblue;
+  margin-top: 3px;
 }
 
 header.header div.header1_bow h1.header1_grid p {
@@ -24,6 +25,7 @@ header.header div.header2_bow h1.header2_grid {
   line-height: 41px;
   text-align: left;
   color: aliceblue;
+  margin-top: 3px;
 }
 
 @media (max-width: 500px) {
