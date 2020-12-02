@@ -35,8 +35,10 @@
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
 
+
    <div class="comments">
-      <h4>＜コメント一覧＞</h4>
+    <h4>＜コメント一覧＞</h4>
+      <% if user_signed_in? %>
       <% if @comments %>
         <% @comments.each do |comment| %>
           <p>
@@ -45,6 +47,7 @@
           </p>
         <% end %>
       <% end %>
+    <% end %>
     </div>
    </div>
  </div>

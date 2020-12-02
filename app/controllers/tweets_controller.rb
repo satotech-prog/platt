@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :search]
+  before_action :authenticate_user!, except: [:index, :show, :search]
 
   def index
     @tweets = Tweet.all.order("created_at DESC")
