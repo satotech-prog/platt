@@ -3,10 +3,10 @@ class Tweet < ApplicationRecord
     validates :title
     validates :exposition
     validates :image
-end
+  end
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Tweet.where('title LIKE(?)', "%#{search}%")
     else
       Tweet.all
@@ -17,4 +17,3 @@ end
   belongs_to :user
   has_one_attached :image
 end
-

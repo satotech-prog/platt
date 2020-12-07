@@ -2,7 +2,7 @@ class TweetsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :search]
 
   def index
-    @tweets = Tweet.all.order("created_at DESC")
+    @tweets = Tweet.all.order('created_at DESC')
   end
 
   def new
@@ -21,7 +21,7 @@ class TweetsController < ApplicationController
   def show
     @tweet = Tweet.find(params[:id])
     @comment = Comment.new
-    @comments = @tweet.comments.includes(:user).order("created_at DESC")
+    @comments = @tweet.comments.includes(:user).order('created_at DESC')
   end
 
   def destroy
