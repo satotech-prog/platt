@@ -81,6 +81,9 @@ README作成 実装に必要なDBテーブルを作成します。
 
 ユーザー管理機能 新規登録では名前、メールアドレス、パスワードが必須でログインではメールアドレスとパスワードが必須です。ログインすると現在ログインしているユーザーの名前が表示され、クリックするとマイページに遷移することが出来ます。
 
+[![Image from Gyazo](https://i.gyazo.com/883c6db86c5b87c62a3a390e4f2f3fe1.png)](https://gyazo.com/883c6db86c5b87c62a3a390e4f2f3fe1)
+[![Image from Gyazo](https://i.gyazo.com/55d50a85f14104d295a5061a55646684.png)](https://gyazo.com/55d50a85f14104d295a5061a55646684)
+
 ## 実装予定の機能
 フォロー、フォロワー機能
 
