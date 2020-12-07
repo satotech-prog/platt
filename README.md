@@ -67,7 +67,7 @@ README作成 実装に必要なDBテーブルを作成します。
 
 インデックス作成(トップページ作成) 投稿したツイートが上から新しい順に表示され<br>ユーザーは投稿一覧表示を確認することが出来ます。
 
-[![Image from Gyazo](https://i.gyazo.com/eafc3eee4be7bae92d58ae1e7d0d2fa7.gif)](https://gyazo.com/eafc3eee4be7bae92d58ae1e7d0d2fa7)
+https://i.gyazo.com/a2671a6523e06054cd8ebebcd41a3d31.jpg
 
 投稿機能の実装 NEWと書かれた投稿ボタンを押すと投稿ページに遷移出来ます。投稿するには画像、タイトル、説明文が必須で記入漏れがある場合エラー文が表示されます。なお投稿ボタンはログインしているユーザーにしか表示されません。
 
