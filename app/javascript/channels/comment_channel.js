@@ -12,7 +12,7 @@ consumer.subscriptions.create("CommentChannel", {
   received(data) {
     const html = `<p>${data.content.text}</p>`;
     const comments = document.getElementById('comments');
-    const newComment = document.getElementById('comments_text');
+    const newComment = document.getElementById('comment_text');
     comments.insertAdjacentHTML('afterbegin', html);
     newComment.value='';
   }
