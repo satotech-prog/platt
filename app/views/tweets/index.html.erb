@@ -10,7 +10,7 @@
   <%= link_to tweet_path(tweet.id) do %>
     <div class="contribution">
      <div class="contribution-title">
-     <%= tweet.title %>
+     <%= tweet.exposition %>
      </div>
      <div class="contribution-user-name">
      <%= tweet.user.name %>
@@ -21,7 +21,11 @@
      </div>
      <% end %>
   <% end %>
+
 </div>
+
+
+
 
 <%= render "shared/footer" %>
 

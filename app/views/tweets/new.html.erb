@@ -4,10 +4,9 @@
     <%= form_with model: @tweet, local: true do |form| %>
 
     <%= render 'shared/error_messages', model: form.object %>
-
+      <%# form.text_field :title, placeholder: "タイトル" %>
+      <%= form.text_area :exposition, rows: "10" %>
       <%= form.file_field :image, id: "tweet-image" %>
-      <%= form.text_field :title, placeholder: "タイトル" %>
-      <%= form.text_area :exposition, placeholder: "思ったこと感じたことはなんだろう？", rows: "10" %>
       <%= form.submit "アップロード"%>
     <% end %>
   </div>
