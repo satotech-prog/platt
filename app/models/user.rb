@@ -10,6 +10,6 @@ class User < ApplicationRecord
     validates :password, length: { maximum: 6 }
   end
 
-  #as_many :tweets
-  #has_many :comments
+  has_many :tweets
+  has_many :comments
 end
