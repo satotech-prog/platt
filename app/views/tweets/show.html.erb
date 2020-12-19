@@ -8,9 +8,11 @@
 
     <div class="tweet-base">
 
-    <%= link_to @tweet.image, "data-lightbox" => @tweet.image do %>
-      <span><%= image_tag @tweet.image, height: '250', :style=>"width:300;", class: 'tweet-image' if @tweet.image.attached? %></span>
+    <% if @tweet.image != nil %>
+      <%= link_to @tweet.image, "data-lightbox" => @tweet.image do %>
+        <span><%= image_tag @tweet.image, height: '250', :style=>"width:300;", class: 'tweet-image' if @tweet.image.attached? %></span>
       <% end %>
+    <% end %>
       
       <div class="tweet-page">
       <% if user_signed_in? && current_user.id == @tweet.user_id%>
